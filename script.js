@@ -26,6 +26,8 @@ function drawMarkers() {
 	{
 		marker[i] = new google.maps.Marker({
 		position: locations[i],
+		animation: google.maps.Animation.DROP,
+		icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',	
 		map: map
 		});
 	}
