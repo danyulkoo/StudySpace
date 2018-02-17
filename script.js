@@ -12,6 +12,9 @@ function initMap() {
 	var marker = new google.maps.Marker({
 		position: ucla,
 		map: map,
-		title: 'Hello World!'
+		title: 'UCLA'
 	});
 }
+
+
+
