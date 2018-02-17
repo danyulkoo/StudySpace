@@ -1,7 +1,17 @@
 var map;
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-    });
+    
+	var ucla = {lat: 34.0689, lng: -118.4452};
+
+	map = new google.maps.Map(document.getElementById('map'), 
+	{
+		center: ucla,
+		zoom: 15
+	});
+	
+	var marker = new google.maps.Marker({
+		position: ucla,
+		map: map,
+		title: 'Hello World!'
+	});
 }
