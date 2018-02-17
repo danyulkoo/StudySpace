@@ -11,11 +11,28 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 90%;
+      }
+
+      #block {
+        background: green;
+        height:100%;
+      }
+
+      #locationTable
+      {
+        background: green;
+        color: white;
+        width: 100%;
+      }
+      td
+      {
+        text-align: center;
+        vertical-align: middle;
       }
       /* Optional: Makes the sample page fill the window. (changed this to 90%) */
       html, body {
-        height: 90%;
+        height: 100%;
         margin: 0;
         padding: 0;
       }
@@ -26,6 +43,32 @@
   </head>
   <body>
     <div id="map"></div>
+    <div id = "block"> 
+      <table id = "locationTable">
+        <tr>
+          <td> Powell Library </td>
+          <td> YRL (Young Research Library) </td>
+          <td> Hedrick Study </td>
+
+        </tr>
+
+        <tr>
+          <td> Feast </td>
+          <td> Deneve </td>
+          <td> Bplate </td>
+
+        </tr>
+
+        <tr>
+          <td> Carnesale </td>
+          <td> Covel </td>
+          <td> Sproul </td>
+
+        </tr>
+
+
+
+    </div>
     <script src="script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2LOT7eAgNLMQBZBZwG1zwgENF3Tt1ww&callback=initMap" async defer></script>
   
