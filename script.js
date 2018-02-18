@@ -4,6 +4,10 @@ var yrl = {lat: 34.075255, lng: -118.441474};
 var hedrickStudy = {lat: 34.073265, lng: -118.452042};
 var feast = {lat: 34.072065, lng: -118.451405};
 var bplate = {lat: 34.072037, lng: -118.449733};
+var fireside = {lat: 34.073274, lng: -118.452326};
+var bombShelter ={lat: 34.068566, lng: -118.442319};
+var sproul = {lat: 34.071488, lng: -118.450133};
+var seLibrary = {lat: 34.069066, lng: -118.442648};
 var names = ["Powell", "Young Research Library", "The Study", "Feast", "Bruin Plate"];
 var icon1 = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 //var icon2 = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
@@ -11,11 +15,15 @@ var icon1 = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 
 
 var locations = [
-		["Powell", powell],
+		["Powell Library", powell],
 		["Young Research Library", yrl],
 		["The Study", hedrickStudy], 
 		["Feast", feast],
-		["Bruin Plate", bplate]
+		["Bruin Plate", bplate],
+		["Hedrick Fireside Lounge", fireside],
+		["Bomb Shelter", bombShelter],
+		["Sproul Living Room", sproul],
+		["Science & Engineering Library", seLibrary],
 				];
 var marker = [];
 
@@ -35,18 +43,25 @@ function initMap() {
 	for (i = 0; i < locations.length; i++) {  
 		marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        animation: google.maps.Animation.DROP,
         map: map
-    });
+   		});
 
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
         return function() {
           infowindow.setContent(locations[i][0]);
           infowindow.open(map, marker);
         }
       })(marker, i));
     }
-	
 }
+
+function showWindow(){
+      var infowindow = new google.maps.InfoWindow();
+      infowindow.setContent("Test");
+      infowindow.open(map, marker);
+}
+
 /*
 function drawMarkers(loc) {
 	marker = new google.maps.Marker({
