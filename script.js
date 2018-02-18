@@ -1,4 +1,5 @@
 var map;
+var ucla = {lat:34.0689, lng: -118.4452}
 var powell = {lat: 34.071752, lng: -118.442175};
 var yrl = {lat: 34.075255, lng: -118.441474};
 var hedrickStudy = {lat: 34.073265, lng: -118.452042};
@@ -14,7 +15,7 @@ var icon1 = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 //var iconmaster = icon1;
 
 class studySpaces {
-	
+
 }
 
 var locations = [
@@ -36,7 +37,7 @@ function initMap() {
 	
 	map = new google.maps.Map(document.getElementById('map'), 
 	{
-		center: new google.maps.LatLng(34.0689, -118.4452),
+		center: ucla,
 		zoom: 15
 	});
 	
@@ -45,7 +46,7 @@ function initMap() {
 	
 	for (i = 0; i < locations.length; i++) {  
 		marker[i] = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        position: locations[i][1],
         animation: google.maps.Animation.DROP,
         map: map
    		});
@@ -62,14 +63,25 @@ function initMap() {
           infowindow.close();
         }
       })(marker, i));
+
+      google.maps.event.addListener(marker[i], 'click', (function(marker, i) {
+        return function() {
+        	map.setCenter(marker[i].getPosition());
+          	map.setZoom(18);
+        }
+      })(marker, i));
     }
 }
 
 
 function showWindow(n){
-      var infowindow = new google.maps.InfoWindow();
-      infowindow.setContent(locations[n][0]);
-      infowindow.open(map, marker[n]);
+	map.setZoom(18);
+	map.setCenter(locations[n][1]);
+	
+
+    var infowindow = new google.maps.InfoWindow();
+    infowindow.setContent(locations[n][0]);
+    infowindow.open(map, marker[n]);
 }
 
 /*
