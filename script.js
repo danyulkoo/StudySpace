@@ -14,20 +14,32 @@ var icon1 = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 //var icon2 = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
 //var iconmaster = icon1;
 
-class studySpaces {
+class StudySpace
+{
+	constructor(name, hours, distance)
+	{
+		this.name = name;
+		this.hours = hours;
+		this.distance = distance;
+	}
+
+	printData()
+	{
+		return '<strong>' + this.name + '</strong>' + '<br>' + 'Hours available: ' + this.hours + '<br>' + 'Distance from hill: ' + this.distance;
+	}
 
 }
 
 var locations = [
-		["Powell Library", powell],
-		["Young Research Library", yrl],
-		["The Study", hedrickStudy], 
-		["Feast", feast],
-		["Bruin Plate", bplate],
-		["Hedrick Fireside Lounge", fireside],
-		["Bomb Shelter", bombShelter],
-		["Sproul Living Room", sproul],
-		["Science & Engineering Library", seLibrary],
+		[new StudySpace("Powell Library", "9-5", 5), 					powell],
+		[new StudySpace("Young Research Library", "9-5", 5), 			   yrl],
+		[new StudySpace("The Study", "9-5", 5), 				  hedrickStudy], 
+		[new StudySpace("Feast", "9-5", 5), 						     feast],
+		[new StudySpace("Bruin Plate", "9-5", 5), 						bplate],
+		[new StudySpace("Hedrick Fireside Lounge", "9-5", 5),	      fireside],
+		[new StudySpace("Bomb Shelter", "9-5", 5),				   bombShelter],
+		[new StudySpace("Sproul Living Room", "9-5", 5), 				sproul],
+		[new StudySpace("Science & Engineering Library", "9-5", 5),  seLibrary]
 				];
 var marker = [];
 
@@ -53,7 +65,7 @@ function initMap() {
 
       google.maps.event.addListener(marker[i], 'mouseover', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][0]);
+          infowindow.setContent(locations[i][0].name);
           infowindow.open(map, marker[i]);
         }
       })(marker, i));
@@ -80,7 +92,8 @@ function showWindow(n){
 	
 
     var infowindow = new google.maps.InfoWindow();
-    infowindow.setContent(locations[n][0]);
+    infowindow.setContent(locations[n][0].printData());
+    //infowindow.setContent(locations[n][0].name);
     infowindow.open(map, marker[n]);
 }
 
