@@ -9,6 +9,7 @@ var fireside = {lat: 34.073274, lng: -118.452326};
 var bombShelter ={lat: 34.068566, lng: -118.442319};
 var sproul = {lat: 34.071488, lng: -118.450133};
 var seLibrary = {lat: 34.069066, lng: -118.442648};
+var isOpen = false;
 //var names = ["Powell", "Young Research Library", "The Study", "Feast", "Bruin Plate"];
 var icon1 = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 //var icon2 = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
@@ -40,9 +41,8 @@ function initMap() {
 		center: ucla,
 		zoom: 15
 	});
-	
-	var infowindow = new google.maps.InfoWindow();
 
+	var infowindow = new google.maps.InfoWindow();
 	
 	for (i = 0; i < locations.length; i++) {  
 		marker[i] = new google.maps.Marker({
@@ -73,15 +73,27 @@ function initMap() {
     }
 }
 
-
 function showWindow(n){
 	map.setZoom(18);
 	map.setCenter(locations[n][1]);
-	
 
-    var infowindow = new google.maps.InfoWindow();
-    infowindow.setContent(locations[n][0]);
-    infowindow.open(map, marker[n]);
+	infowindow.setContent(locations[n][0]);
+	infowindow.open(map, marker[n]);
+
+	/*for(i = 0; i < locations.length(); i++) {
+	    if (isOpen[i]) {
+	    	map.setZoom(18);
+			map.setCenter(locations[i][1]);
+			
+		    var infowindow = new google.maps.InfoWindow();
+		    infowindow.setContent(locations[i][0]);
+		    infowindow.open(map, marker[i]);
+	    }
+	    else {
+	    	infowindow.close();
+	    	//isOpen[i] = false;
+	    }
+	}*/
 }
 
 /*
