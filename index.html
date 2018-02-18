@@ -3,6 +3,22 @@
 <!DOCTYPE html>
 
 <html>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
   <head>
     <title>StudySpace</title>
     <meta name="viewport" content="initial-scale=1.0">
@@ -11,17 +27,17 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 85%;
+        height: 86%;
       }
 
       #block {
-        background: green;
-        height:100%;
+        background: black;
+        height:14%;
       }
 
       #locationTable
       {
-        background: green;
+        background: black;
         color: white;
         width: 100%;
       }
@@ -37,7 +53,7 @@
         padding: 0;
       }
     </style>
-	 <script async defer
+   <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2LOT7eAgNLMQBZBZwG1zwgENF3Tt1ww&callback=initMap">
     </script>
   </head>
@@ -46,32 +62,49 @@
     <div id = "block"> 
       <table id = "locationTable">
         <tr>
-          <td> Powell Library </td>
-          <td> YRL (Young Research Library) </td>
-          <td> Hedrick Study </td>
-
+          <td>
+            <button type="button" class="btn btn-primary">Powell Library</button>
+          </td>
+          <td> 
+            <button type="button" class="btn btn-primary">YRL (Young Research Library)</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary">Hedrick Study</button>
+          </td>
         </tr>
 
         <tr>
-          <td> Feast </td>
-          <td> Deneve </td>
-          <td> Bplate </td>
-
+          <td>
+            <button type="button" class="btn btn-primary">Feast</button>
+          </td>
+          <td> 
+            <button type="button" class="btn btn-primary">De Neve</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary">Bplate</button>
+          </td>
         </tr>
 
-        <tr>
-          <td> Carnesale </td>
-          <td> Covel </td>
-          <td> Sproul </td>
-
+                <tr>
+          <td>
+            <button type="button" class="btn btn-primary">Carnesale</button>
+          </td>
+          <td> 
+            <button type="button" class="btn btn-primary">Covel</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary">Sproul</button>
+          </td>
         </tr>
 
 
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2LOT7eAgNLMQBZBZwG1zwgENF3Tt1ww&callback=initMap" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   
   
   </body>
