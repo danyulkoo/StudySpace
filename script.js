@@ -9,7 +9,6 @@ var fireside = {lat: 34.073274, lng: -118.452326};
 var bombShelter ={lat: 34.068566, lng: -118.442319};
 var sproul = {lat: 34.071488, lng: -118.450133};
 var seLibrary = {lat: 34.069066, lng: -118.442648};
-var icon1 = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 
 class StudySpace
 {
@@ -36,7 +35,7 @@ var locations = [
 	[new StudySpace("Bomb Shelter", "OPEN 24 HRS", 14),				   bombShelter],
 	[new StudySpace("Sproul Living Room", "OPEN 24 HRS", 2), 		   sproul],
 	[new StudySpace("Science & Engineering Library", "9am - 5pm", 13), seLibrary]
-		];
+];
 var marker = [];
 var infowindow;
 
