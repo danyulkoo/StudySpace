@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudySpace</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <!--top section-->
+    <div id ="description">
+        <h1>Welcome to StudySpace!</h1>
+        <h3>Take advantage of all the great study spots our school has to offer.</h3>
+    </div>
+    <div id="main-wrapper">
+        <!--leftside navbar-->
+        <div id="navbar-wrapper">
+            <ul class="nav">
+                <% locations.forEach(function(place) { %>
+                <li class="nav-item">
+                    <a href="<%='/location?id='+place._id %>"><%= place.name %></a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>

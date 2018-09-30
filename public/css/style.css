@@ -1,0 +1,51 @@
+#description {
+  text-align: center;
+  height: 15%;
+  padding-top: 1%;
+  background-color: lightskyblue;
+}
+
+#description h1 {
+  font-size: 32pt;
+}
+
+#main-wrapper {
+  background-color: beige;
+  height: 85%;
+}
+
+#content-wrapper {
+  width: 85%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+#content-wrapper #map {
+  margin-top: 20px;
+  margin-left: 20px;
+  border: solid black 3px;
+  width: 20%;
+  height: 20%;
+}
+      
+#navbar-wrapper {
+  width: 15%;
+  height: 100%;
+  background-color: rgb(204, 222, 252);
+  float: left;
+  border: solid gray 2px;
+  border-left: none;
+  padding: 1%;
+  overflow: hidden;
+}
+
+#navbar-wrapper li {
+  margin-top: 10px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
