@@ -4,8 +4,12 @@
             <div id="map"></div>
             <div class="location-content">
                 <h1><%= name %></h1>
-                <p>Hours: <%= hours %> </p>
-                <p>Approximately <%= distance %>-minute walk from the Hill</p>
+                <h4><strong>Hours:</strong> <%= hours %> </h4>
+                <% if (distance < 5) {%>
+                    <p>*On the Hill</p>
+                <% } else { %>
+                    <p>*Approximate <strong><%= distance %>-minute</strong> walk from the Hill</p>
+                <% } %>
             </div>
         </div>
 <% include partials/footer %>

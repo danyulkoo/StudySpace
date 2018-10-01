@@ -11,7 +11,7 @@ var db = mongojs('studyspace', ['locations']);
 
 // routes
 var routes = require('./routes/index');
-var testlocation = require('./routes/location');
+var location = require('./routes/location');
 
 var app = express();
 
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressValidator()); 
 
 app.use('/', routes);
-app.use('/location', testlocation);
+app.use('/location', location);
 
 app.get('/location-data', function(req, res) {
     db.locations.find().sort({name:1}, function (err, docs) {

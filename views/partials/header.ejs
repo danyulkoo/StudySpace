@@ -11,18 +11,19 @@
 </head>
 <body>
     <!--top section-->
-    <div id ="description">
-        <h1>Welcome to StudySpace!</h1>
-        <h3>Take advantage of all the great study spots our school has to offer.</h3>
+    <div id ="header">
+        <span>StudySpace</span>
     </div>
     <div id="main-wrapper">
         <!--leftside navbar-->
         <div id="navbar-wrapper">
             <ul class="nav">
                 <% locations.forEach(function(place) { %>
-                <li class="nav-item">
-                    <a href="<%='/location?id='+place._id %>"><%= place.name %></a>
-                </li>
+                    <div class="item-wrapper">
+                        <li class="nav-item">
+                            <a href="<%='/location?id='+place._id %>"><%= place.name %></a>
+                        </li>
+                    </div>
                 <% }) %>
             </ul>
         </div>

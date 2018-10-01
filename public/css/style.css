@@ -1,12 +1,19 @@
-#description {
-  text-align: center;
+#header {
   height: 15%;
-  padding-top: 1%;
   background-color: lightskyblue;
+  background-image: url("http://jiwanjk.bol.ucla.edu/Pictures/ucla.jpg");
+  background-position: 50% 55%;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  position: relative;
+  border-bottom: solid gray 2px;
 }
 
-#description h1 {
-  font-size: 32pt;
+#header span {
+  position: absolute;
+  bottom: 0;
+  font-size: 36pt;
+  margin-left: 20px;
 }
 
 #main-wrapper {
@@ -15,33 +22,47 @@
 }
 
 #content-wrapper {
-  width: 85%;
+  width: 83%;
   height: 100%;
   float: left;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #content-wrapper #map {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-right: 20px;
   border: solid black 3px;
-  width: 20%;
-  height: 20%;
+  width: 40%;
+  height: 40%;
+  float: right;
 }
       
+#content-wrapper .location-content {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
 #navbar-wrapper {
-  width: 15%;
+  width: 17%;
   height: 100%;
   background-color: rgb(204, 222, 252);
   float: left;
-  border: solid gray 2px;
-  border-left: none;
-  padding: 1%;
-  overflow: hidden;
+  border-right: solid gray 2px; 
+  overflow: auto;
+}
+
+#navbar-wrapper .item-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+#navbar-wrapper .item-wrapper:hover {
+  background-color: rgb(142, 167, 201);
 }
 
 #navbar-wrapper li {
-  margin-top: 10px;
+  padding: 7px 0 7px 3px;
 }
 
 html, body {
