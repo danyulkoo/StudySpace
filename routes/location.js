@@ -21,7 +21,8 @@ router.get('/', function(req,res) {
                         locations: docs,
                         name: place.name,
                         hours: place.hours,
-                        distance: place.distance
+                        distance: place.distance,
+                        description: place.description
                     });
                 }
             });

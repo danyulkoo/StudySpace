@@ -2,14 +2,21 @@
         <!--interactive map-->
         <div id="content-wrapper">
             <div id="map"></div>
-            <div class="location-content">
+            <div id="location-content">
                 <h1><%= name %></h1>
                 <h4><strong>Hours:</strong> <%= hours %> </h4>
+                <span>|</span>
                 <% if (distance < 5) {%>
-                    <p>*On the Hill</p>
+                    <span>On the Hill</span>
                 <% } else { %>
-                    <p>*Approximate <strong><%= distance %>-minute</strong> walk from the Hill</p>
+                    <span>Approximate <strong><%= distance %>-minute</strong> walk from the Hill</span>
                 <% } %>
+                <p class="location-desc">
+                    <%= description %>
+                </p>
+            </div>
+            <div id="pics-wrapper">
+                Pics go here
             </div>
         </div>
 <% include partials/footer %>
