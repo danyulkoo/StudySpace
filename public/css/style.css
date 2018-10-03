@@ -5,7 +5,7 @@
   background-position: 50% 80%;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  border-bottom: solid gray 2px;
+  border-bottom: solid black 1px;
   position: relative;
 }
 
@@ -42,19 +42,39 @@
 }
 
 /* Home Page Styles */
+.home-content {
+  padding: 5%;
+}
+
+#intro-wrapper {
+  text-align: center;
+}
+
+#intro-wrapper h3 {
+  font-weight: 250;
+}
+
+#intro-slides-wrapper {
+  margin: 3% auto 0;
+  width: 70%;
+  height: 60%;
+  background-color: rgb(182, 182, 182);
+}
 
 /* Locations Page Styles */
 #content-wrapper {
-  padding: 1.5% 2%;
+  padding: 1.5% 0 1.5% 2%;
   position: relative;
 }
 
 #location-content {
-  height: 35%;
+  height: 40%;
+  border-bottom: solid grey 1px;
 }
 
 #pics-wrapper {
-  margin-top: 1%;
+  margin: 5% auto 10%;
+  width: 70%;
   height: 60%;
   background-color: rgb(182, 182, 182);
 }
@@ -62,9 +82,9 @@
 #map {
   border: solid black 2px;
   width: 30%;
-  height: 35%;
+  height: 90%;
   float: right;
-  margin-right: 1%;
+  margin-right: 2%;
 }
       
 #content-wrapper .location-content {
@@ -97,13 +117,27 @@
   font-size: 13pt;
 }
 
+.carousel {
+  width: 100%;
+  min-width: 400px;
+  height: 420px;
+  border: solid rgb(31, 31, 31) 1px;
+  box-shadow: -11px 10px 30px -7px rgba(0, 0, 0, 0.9);
+}
+
+.carousel-inner img {
+  width: 99.5%;
+  min-width: 398px;
+  height: 418px;
+}
+
 /* Navbar Styles */
 #navbar-wrapper {
   width: 17%;
   height: 100%;
   background-color: rgb(233, 242, 255);
   float: left;
-  border-right: solid gray 2px; 
+  border-right: solid black 1px; 
   overflow: auto;
   padding: 0;
 }
@@ -123,8 +157,12 @@
   width: 100%;
 }
 
+#navbar-wrapper a {
+  color: rgb(5, 34, 180);
+}
 
 html, body {
+  min-width: 1000px;
   height: 100%;
   margin: 0;
   padding: 0;
