@@ -4,19 +4,21 @@
             <div class="home-content">
                 <!--Put something here-->
                 <div id="intro-wrapper">
-                    <h3>Explore all the great study spots UCLA has to offer!</h3>
+                    <h3>Explore the great study spots UCLA has to offer!</h3>
                 </div>
-                <div id="intro-slides-wrapper">
+                <div id="home-slides-wrapper">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                         </ol>
                         <div class="carousel-inner">
                             <% slideImgs.forEach(function(n) { %>
                                 <div class="carousel-item <% if (slideImgs.indexOf(n) == 0) { %>active<% } %>">
-                                    <img class="d-block w-100" src="http://www.9skips.com/wp-content/uploads/2017/10/forests.jpg" alt="slide">
+                                    <a href="<%='/location?id='+locations[n]._id %>"><img class="d-block w-100" src="http://www.9skips.com/wp-content/uploads/2017/10/forests.jpg" alt="slide"></a>
                                     <div class="carousel-caption d-none d-md-block">
                                         <a href="<%='/location?id='+locations[n]._id %>"><h5><%= locations[n].name %></h5></a>
                                     </div>
@@ -32,6 +34,9 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
+                </div>
+                <div id="more-info">
+                    <p>Click location for more info</p>
                 </div>
             </div>
         </div>

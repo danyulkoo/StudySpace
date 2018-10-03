@@ -43,7 +43,7 @@
 
 /* Home Page Styles */
 .home-content {
-  padding: 5%;
+  padding-top: 5%;
 }
 
 #intro-wrapper {
@@ -54,11 +54,28 @@
   font-weight: 250;
 }
 
-#intro-slides-wrapper {
-  margin: 3% auto 0;
+#home-slides-wrapper {
+  margin: 2% auto 0;
   width: 70%;
   height: 60%;
   background-color: rgb(182, 182, 182);
+}
+
+.carousel-inner a {
+  color: white;
+}
+
+.carousel-inner a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#more-info {
+  color: rgb(161, 161, 161);
+  font-size: 11pt;
+  font-weight: 200;
+  margin: 20px auto;
+  text-align: center;
 }
 
 /* Locations Page Styles */

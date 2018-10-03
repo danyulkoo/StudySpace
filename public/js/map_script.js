@@ -15,17 +15,17 @@ function initMap() {
 				map = new google.maps.Map(document.getElementById('map'), 
 				{
 					center: place.coordinates,
-					zoom: 16.4
+					zoom: 16.2
 				});
 				
 				infowindow = new google.maps.InfoWindow({
-					content: place.name+'<br><p style="text-align: center; margin: 0">('+place.distance+'-minute walk)</p>'
+					content: place.name+'<br><p style="text-align: center; margin: 0">('+place.distance+'-minute walk from Hill)</p>'
 				});
 
 				marker = new google.maps.Marker({
 					position: place.coordinates,
 					animation: google.maps.Animation.DROP,
-					map: map
+					map: map	
 				});
 
 				marker.addListener('mouseover', function() {

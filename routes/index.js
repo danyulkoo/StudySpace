@@ -13,9 +13,9 @@ router.use(expressValidator());
 // Root page
 router.get('/', function(req, res) {
     db.locations.find().sort({name:1}, function (err, docs) {
-        // Choose three random numbers (corresponding to a location) for the home display
+        // Choose five random numbers (corresponding to a location) for the home display
         var arr = []
-        while(arr.length < 3){
+        while(arr.length < 5){
             var randomnumber = Math.floor(Math.random()*docs.length);
             if(arr.indexOf(randomnumber) > -1) continue;
             arr[arr.length] = randomnumber;
