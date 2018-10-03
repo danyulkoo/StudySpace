@@ -13,9 +13,16 @@ router.use(expressValidator());
 // Root page
 router.get('/', function(req, res) {
     db.locations.find().sort({name:1}, function (err, docs) {
-        console.log(docs);
+        // Choose three random numbers (corresponding to a location) for the home display
+        var arr = []
+        while(arr.length < 3){
+            var randomnumber = Math.floor(Math.random()*docs.length);
+            if(arr.indexOf(randomnumber) > -1) continue;
+            arr[arr.length] = randomnumber;
+        }
         res.render('index', {
-            locations: docs
+            locations: docs,
+            slideImgs: arr
         });
     });
 
