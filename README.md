@@ -5,6 +5,7 @@ Created with Node.js backend utilizing Express and a MongoDB database.
 
 ## Installation for testing/development
 **This application uses the [Node.js engine](https://nodejs.org/en/download/)**
+
 To install Node.js using Homebrew, use this terminal command (Mac OS & Linux):
 `brew install node`
 
