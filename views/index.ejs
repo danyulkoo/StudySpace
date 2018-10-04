@@ -19,14 +19,14 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                         </ol>
                         <div class="carousel-inner">
-                            <% slideImgs.forEach(function(n) { %>
-                                <div class="carousel-item <% if (slideImgs.indexOf(n) == 0) { %>active<% } %>">
-                                    <a href="<%='/location?id='+locations[n]._id %>"><img class="d-block w-100" src="http://www.9skips.com/wp-content/uploads/2017/10/forests.jpg" alt="slide"></a>
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <a href="<%='/location?id='+locations[n]._id %>"><h5><%= locations[n].name %></h5></a>
-                                    </div>
+                        <% slideImgs.forEach(function(n) { %>
+                            <div class="carousel-item <% if (slideImgs.indexOf(n) == 0) { %>active<% } %>">
+                                <a href="<%='/location?id='+locations[n]._id %>"><img class="d-block w-100" src="http://www.9skips.com/wp-content/uploads/2017/10/forests.jpg" alt="slide"></a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="<%='/location?id='+locations[n]._id %>"><h5><%= locations[n].name %></h5></a>
                                 </div>
-                            <% }) %>
+                            </div>
+                        <% }) %>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

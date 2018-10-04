@@ -22,7 +22,8 @@ router.get('/', function(req,res) {
                         name: place.name,
                         hours: place.hours,
                         distance: place.distance,
-                        description: place.description
+                        description: place.description,
+                        images: place.images
                     });
                 }
             });
