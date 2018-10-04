@@ -1,5 +1,5 @@
 # Study Space
-A website that displays a map of the best spots to study on the UCLA campus, along with each spot’s hours of operation and walking distance from campus housing. #This is a fullstack and redesigned version of the [original](https://github.com/bradleymont/StudySpace) StudySpace protocol built on Node.js.#
+A website that displays a map of the best spots to study on the UCLA campus, along with each spot’s hours of operation and walking distance from campus housing. *This is a fullstack and redesigned version of the [original](https://github.com/bradleymont/StudySpace) StudySpace protocol built on Node.js.*
 
 Created with Node.js backend utilizing Express and a MongoDB database.
 
