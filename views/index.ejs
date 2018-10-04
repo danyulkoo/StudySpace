@@ -19,11 +19,17 @@
                             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                         </ol>
                         <div class="carousel-inner">
-                        <% slideImgs.forEach(function(n) { %>
-                            <div class="carousel-item <% if (slideImgs.indexOf(n) == 0) { %>active<% } %>">
-                                <a href="<%='/location?id='+locations[n]._id %>"><img class="d-block w-100" src="http://www.9skips.com/wp-content/uploads/2017/10/forests.jpg" alt="slide"></a>
+                        <% randNums.forEach(function(num) { %>
+                            <div class="carousel-item <% if (randNums.indexOf(num) == 0) { %>active<% } %>">
+                                <a href="<%='/location?id='+locations[num]._id %>">
+                                    <img class="d-block w-100" 
+                                     src="<% if (typeof locations[num].images !== "undefined") { %>
+                                              <%= locations[num].images[0] %>
+                                          <% } %>" 
+                                     alt="Slide">
+                                </a>
                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="<%='/location?id='+locations[n]._id %>"><h5><%= locations[n].name %></h5></a>
+                                    <a href="<%='/location?id='+locations[num]._id %>"><h5><%= locations[num].name %></h5></a>
                                 </div>
                             </div>
                         <% }) %>

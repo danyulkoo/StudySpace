@@ -19,7 +19,7 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <!--Carousel indicators-->
                     <ol class="carousel-indicators">
-                    <% if (images.length == 0 || (typeof images === "undefined")) { %>
+                    <% if (typeof images === "undefined") { %>
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <% } else { images.forEach(function(img) {%>
                         <li data-target="#carouselExampleIndicators" data-slide-to="<%= images.indexOf(img) %>" class="<% if(images.indexOf(img) == 0) { %>active<% } %>"></li>
@@ -27,7 +27,7 @@
                     </ol>
                     <!--Actual carousel slides/images-->
                     <div class="carousel-inner">
-                    <% if(images.length == 0 || (typeof images === "undefined")) { %>
+                    <% if(typeof images === "undefined" || images.length == 0) { %>
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="http://brand.ucla.edu/wp-content/uploads/2013/08/ucla-logotype-main-11-600x286.jpg" alt="Couldn't find images for <%= name %>">
                         </div>

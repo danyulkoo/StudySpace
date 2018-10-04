@@ -22,7 +22,7 @@ router.get('/', function(req, res) {
         }
         res.render('index', {
             locations: docs,
-            slideImgs: arr
+            randNums: arr
         });
     });
 
